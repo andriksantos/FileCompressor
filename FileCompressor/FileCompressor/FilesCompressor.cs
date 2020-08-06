@@ -39,6 +39,11 @@ namespace FileCompressor
                 txtExtractArchive.Text = openFileDialog1.FileName;
         }
 
+        void CleanTxt()
+        {
+            txtExtractArchive.Text = "";
+            txtExtractDirectory.Text = "";
+        }
         private void BtnExtraction_Click(object sender, EventArgs e)
         {
             SevenZipExtractor.SetLibraryPath(Application.StartupPath + "\\7z.dll");
@@ -47,6 +52,7 @@ namespace FileCompressor
                 tmp.ExtractArchive(txtExtractDirectory.Text);
             }
             MessageBox.Show("Extraction Finished ...");
+            CleanTxt();
         }
     }
 }
