@@ -54,8 +54,8 @@
             this.BtnCompression = new Guna.UI2.WinForms.Guna2Button();
             this.BtnBrowseOut = new Guna.UI2.WinForms.Guna2Button();
             this.BtnBrowse = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCompressOutput = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCompressDirectory = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Titles = new Guna.UI2.WinForms.Guna2HtmlToolTip();
@@ -353,8 +353,8 @@
             this.guna2GroupBox2.Controls.Add(this.BtnCompression);
             this.guna2GroupBox2.Controls.Add(this.BtnBrowseOut);
             this.guna2GroupBox2.Controls.Add(this.BtnBrowse);
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox3);
-            this.guna2GroupBox2.Controls.Add(this.guna2TextBox4);
+            this.guna2GroupBox2.Controls.Add(this.txtCompressOutput);
+            this.guna2GroupBox2.Controls.Add(this.txtCompressDirectory);
             this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2GroupBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -384,6 +384,7 @@
             this.BtnCompression.TabIndex = 6;
             this.BtnCompression.Text = "Compression";
             this.Titles.SetToolTip(this.BtnCompression, "Compression");
+            this.BtnCompression.Click += new System.EventHandler(this.BtnCompression_Click);
             // 
             // BtnBrowseOut
             // 
@@ -406,6 +407,7 @@
             this.BtnBrowseOut.TabIndex = 5;
             this.Titles.SetToolTip(this.BtnBrowseOut, "Browse Out");
             this.BtnBrowseOut.UseTransparentBackground = true;
+            this.BtnBrowseOut.Click += new System.EventHandler(this.BtnBrowseOut_Click);
             // 
             // BtnBrowse
             // 
@@ -428,52 +430,53 @@
             this.BtnBrowse.TabIndex = 4;
             this.Titles.SetToolTip(this.BtnBrowse, "Browse");
             this.BtnBrowse.UseTransparentBackground = true;
+            this.BtnBrowse.Click += new System.EventHandler(this.BtnBrowse_Click);
             // 
-            // guna2TextBox3
+            // txtCompressOutput
             // 
-            this.guna2TextBox3.BorderRadius = 6;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(122, 107);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(310, 25);
-            this.guna2TextBox3.TabIndex = 3;
+            this.txtCompressOutput.BorderRadius = 6;
+            this.txtCompressOutput.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCompressOutput.DefaultText = "";
+            this.txtCompressOutput.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCompressOutput.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCompressOutput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCompressOutput.DisabledState.Parent = this.txtCompressOutput;
+            this.txtCompressOutput.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCompressOutput.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCompressOutput.FocusedState.Parent = this.txtCompressOutput;
+            this.txtCompressOutput.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCompressOutput.HoverState.Parent = this.txtCompressOutput;
+            this.txtCompressOutput.Location = new System.Drawing.Point(122, 107);
+            this.txtCompressOutput.Name = "txtCompressOutput";
+            this.txtCompressOutput.PasswordChar = '\0';
+            this.txtCompressOutput.PlaceholderText = "";
+            this.txtCompressOutput.SelectedText = "";
+            this.txtCompressOutput.ShadowDecoration.Parent = this.txtCompressOutput;
+            this.txtCompressOutput.Size = new System.Drawing.Size(310, 25);
+            this.txtCompressOutput.TabIndex = 3;
             // 
-            // guna2TextBox4
+            // txtCompressDirectory
             // 
-            this.guna2TextBox4.BorderRadius = 6;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(148, 60);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(284, 25);
-            this.guna2TextBox4.TabIndex = 2;
+            this.txtCompressDirectory.BorderRadius = 6;
+            this.txtCompressDirectory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCompressDirectory.DefaultText = "";
+            this.txtCompressDirectory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCompressDirectory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCompressDirectory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCompressDirectory.DisabledState.Parent = this.txtCompressDirectory;
+            this.txtCompressDirectory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCompressDirectory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCompressDirectory.FocusedState.Parent = this.txtCompressDirectory;
+            this.txtCompressDirectory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCompressDirectory.HoverState.Parent = this.txtCompressDirectory;
+            this.txtCompressDirectory.Location = new System.Drawing.Point(148, 60);
+            this.txtCompressDirectory.Name = "txtCompressDirectory";
+            this.txtCompressDirectory.PasswordChar = '\0';
+            this.txtCompressDirectory.PlaceholderText = "";
+            this.txtCompressDirectory.SelectedText = "";
+            this.txtCompressDirectory.ShadowDecoration.Parent = this.txtCompressDirectory;
+            this.txtCompressDirectory.Size = new System.Drawing.Size(284, 25);
+            this.txtCompressDirectory.TabIndex = 2;
             // 
             // guna2HtmlLabel5
             // 
@@ -561,8 +564,8 @@
         private Guna.UI2.WinForms.Guna2Button BtnCompression;
         private Guna.UI2.WinForms.Guna2Button BtnBrowseOut;
         private Guna.UI2.WinForms.Guna2Button BtnBrowse;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtCompressOutput;
+        private Guna.UI2.WinForms.Guna2TextBox txtCompressDirectory;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlToolTip Titles;

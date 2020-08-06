@@ -21,12 +21,13 @@ namespace FileCompressor
         {
             ShadowFIleCompressor.SetShadowForm(this);
         }
-
+        //CONTROL EXIT
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //EXTRACTION
         private void BtnExtractBrowseDirectory_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
@@ -39,7 +40,7 @@ namespace FileCompressor
                 txtExtractArchive.Text = openFileDialog1.FileName;
         }
 
-        void CleanTxt()
+        void CleanTxtExtraction()
         {
             txtExtractArchive.Text = "";
             txtExtractDirectory.Text = "";
@@ -51,8 +52,36 @@ namespace FileCompressor
             {
                 tmp.ExtractArchive(txtExtractDirectory.Text);
             }
-            MessageBox.Show("Extraction Finished ...");
-            CleanTxt();
+            MessageBox.Show("Extraction Finished ...", "Information");
+            CleanTxtExtraction();
+        }
+        //COMPRESSION
+        void CleanTxtCompression()
+        {
+            txtCompressDirectory.Text = "";
+            txtCompressOutput.Text = "";
+        }
+        private void BtnBrowse_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+                txtCompressDirectory.Text = folderBrowserDialog1.SelectedPath;
+        }
+
+        private void BtnBrowseOut_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                txtCompressOutput.Text = saveFileDialog1.FileName;
+        }
+
+        private void BtnCompression_Click(object sender, EventArgs e)
+        {
+            SevenZipCompressor.SetLibraryPath(Application.StartupPath + "\\7z.dll");
+            SevenZipCompressor tmp = new SevenZipCompressor();
+            tmp.ArchiveFormat = OutArchiveFormat.SevenZip;
+            tmp.CompressionLevel = CompressionLevel.Ultra;
+            tmp.CompressDirectory(txtCompressDirectory.Text, txtCompressOutput.Text);
+            MessageBox.Show("Compression Finished ...","Information");
+            CleanTxtCompression();
         }
     }
 }
