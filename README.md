@@ -40,4 +40,6 @@ Combine multiple files into a single compressed folder to save storage space or 
 
 Please See [contribution guidelines](https://github.com/andriksantos/FileCompressor/blob/master/Contributing.md).
 
+If you have any question about this opinionated list, do not hesitate to contact me [andricksantos1@gmail.com](mailto:andricksantos1@gmail.com) on Gmail or open an issue on GitHub.
+
 ---
