@@ -47,13 +47,13 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnExtractBrowseDirectory = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnxtractBrowseArchive = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnExtraction = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -88,6 +88,7 @@
             this.Exit.ShadowDecoration.Parent = this.Exit;
             this.Exit.Size = new System.Drawing.Size(45, 29);
             this.Exit.TabIndex = 0;
+            this.Titles.SetToolTip(this.Exit, "Exit");
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Maximized
@@ -118,6 +119,7 @@
             this.Minimized.ShadowDecoration.Parent = this.Minimized;
             this.Minimized.Size = new System.Drawing.Size(45, 29);
             this.Minimized.TabIndex = 2;
+            this.Titles.SetToolTip(this.Minimized, "Minimize");
             // 
             // PanelTitulo
             // 
@@ -191,9 +193,9 @@
             // 
             // guna2GroupBox1
             // 
-            this.guna2GroupBox1.Controls.Add(this.guna2Button3);
-            this.guna2GroupBox1.Controls.Add(this.guna2Button2);
-            this.guna2GroupBox1.Controls.Add(this.guna2Button1);
+            this.guna2GroupBox1.Controls.Add(this.BtnExtraction);
+            this.guna2GroupBox1.Controls.Add(this.BtnxtractBrowseArchive);
+            this.guna2GroupBox1.Controls.Add(this.BtnExtractBrowseDirectory);
             this.guna2GroupBox1.Controls.Add(this.guna2TextBox2);
             this.guna2GroupBox1.Controls.Add(this.guna2TextBox1);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
@@ -277,71 +279,74 @@
             this.guna2TextBox2.Size = new System.Drawing.Size(310, 25);
             this.guna2TextBox2.TabIndex = 3;
             // 
-            // guna2Button1
+            // BtnExtractBrowseDirectory
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button1.Location = new System.Drawing.Point(438, 60);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(25, 25);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.UseTransparentBackground = true;
+            this.BtnExtractBrowseDirectory.Animated = true;
+            this.BtnExtractBrowseDirectory.CheckedState.Parent = this.BtnExtractBrowseDirectory;
+            this.BtnExtractBrowseDirectory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExtractBrowseDirectory.CustomImages.Parent = this.BtnExtractBrowseDirectory;
+            this.BtnExtractBrowseDirectory.FillColor = System.Drawing.Color.Transparent;
+            this.BtnExtractBrowseDirectory.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnExtractBrowseDirectory.ForeColor = System.Drawing.Color.White;
+            this.BtnExtractBrowseDirectory.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.BtnExtractBrowseDirectory.HoverState.Parent = this.BtnExtractBrowseDirectory;
+            this.BtnExtractBrowseDirectory.Image = ((System.Drawing.Image)(resources.GetObject("BtnExtractBrowseDirectory.Image")));
+            this.BtnExtractBrowseDirectory.ImageSize = new System.Drawing.Size(25, 25);
+            this.BtnExtractBrowseDirectory.Location = new System.Drawing.Point(438, 60);
+            this.BtnExtractBrowseDirectory.Name = "BtnExtractBrowseDirectory";
+            this.BtnExtractBrowseDirectory.PressedColor = System.Drawing.Color.Transparent;
+            this.BtnExtractBrowseDirectory.ShadowDecoration.Parent = this.BtnExtractBrowseDirectory;
+            this.BtnExtractBrowseDirectory.Size = new System.Drawing.Size(25, 25);
+            this.BtnExtractBrowseDirectory.TabIndex = 4;
+            this.Titles.SetToolTip(this.BtnExtractBrowseDirectory, "Extract Browse Directory");
+            this.BtnExtractBrowseDirectory.UseTransparentBackground = true;
             // 
-            // guna2Button2
+            // BtnxtractBrowseArchive
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button2.Location = new System.Drawing.Point(438, 107);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(25, 25);
-            this.guna2Button2.TabIndex = 5;
-            this.guna2Button2.UseTransparentBackground = true;
+            this.BtnxtractBrowseArchive.Animated = true;
+            this.BtnxtractBrowseArchive.CheckedState.Parent = this.BtnxtractBrowseArchive;
+            this.BtnxtractBrowseArchive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnxtractBrowseArchive.CustomImages.Parent = this.BtnxtractBrowseArchive;
+            this.BtnxtractBrowseArchive.FillColor = System.Drawing.Color.Transparent;
+            this.BtnxtractBrowseArchive.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnxtractBrowseArchive.ForeColor = System.Drawing.Color.White;
+            this.BtnxtractBrowseArchive.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.BtnxtractBrowseArchive.HoverState.Parent = this.BtnxtractBrowseArchive;
+            this.BtnxtractBrowseArchive.Image = ((System.Drawing.Image)(resources.GetObject("BtnxtractBrowseArchive.Image")));
+            this.BtnxtractBrowseArchive.ImageSize = new System.Drawing.Size(25, 25);
+            this.BtnxtractBrowseArchive.Location = new System.Drawing.Point(438, 107);
+            this.BtnxtractBrowseArchive.Name = "BtnxtractBrowseArchive";
+            this.BtnxtractBrowseArchive.PressedColor = System.Drawing.Color.Transparent;
+            this.BtnxtractBrowseArchive.ShadowDecoration.Parent = this.BtnxtractBrowseArchive;
+            this.BtnxtractBrowseArchive.Size = new System.Drawing.Size(25, 25);
+            this.BtnxtractBrowseArchive.TabIndex = 5;
+            this.Titles.SetToolTip(this.BtnxtractBrowseArchive, "xtract Browse Archive");
+            this.BtnxtractBrowseArchive.UseTransparentBackground = true;
             // 
-            // guna2Button3
+            // BtnExtraction
             // 
-            this.guna2Button3.BorderRadius = 6;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Raleway", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(175, 158);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(115, 32);
-            this.guna2Button3.TabIndex = 6;
-            this.guna2Button3.Text = "Extraction";
+            this.BtnExtraction.BorderRadius = 6;
+            this.BtnExtraction.CheckedState.Parent = this.BtnExtraction;
+            this.BtnExtraction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExtraction.CustomImages.Parent = this.BtnExtraction;
+            this.BtnExtraction.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.BtnExtraction.Font = new System.Drawing.Font("Raleway", 9F);
+            this.BtnExtraction.ForeColor = System.Drawing.Color.White;
+            this.BtnExtraction.HoverState.Parent = this.BtnExtraction;
+            this.BtnExtraction.Location = new System.Drawing.Point(175, 158);
+            this.BtnExtraction.Name = "BtnExtraction";
+            this.BtnExtraction.ShadowDecoration.Parent = this.BtnExtraction;
+            this.BtnExtraction.Size = new System.Drawing.Size(115, 32);
+            this.BtnExtraction.TabIndex = 6;
+            this.BtnExtraction.Text = "Extraction";
+            this.Titles.SetToolTip(this.BtnExtraction, "Extraction");
             // 
             // guna2GroupBox2
             // 
             this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel6);
             this.guna2GroupBox2.Controls.Add(this.guna2Button4);
             this.guna2GroupBox2.Controls.Add(this.guna2Button5);
-            this.guna2GroupBox2.Controls.Add(this.guna2Button6);
+            this.guna2GroupBox2.Controls.Add(this.btn);
             this.guna2GroupBox2.Controls.Add(this.guna2TextBox3);
             this.guna2GroupBox2.Controls.Add(this.guna2TextBox4);
             this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel5);
@@ -394,26 +399,26 @@
             this.guna2Button5.TabIndex = 5;
             this.guna2Button5.UseTransparentBackground = true;
             // 
-            // guna2Button6
+            // btn
             // 
-            this.guna2Button6.Animated = true;
-            this.guna2Button6.CheckedState.Parent = this.guna2Button6;
-            this.guna2Button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button6.CustomImages.Parent = this.guna2Button6;
-            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.HoverState.Parent = this.guna2Button6;
-            this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
-            this.guna2Button6.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button6.Location = new System.Drawing.Point(438, 60);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
-            this.guna2Button6.Size = new System.Drawing.Size(25, 25);
-            this.guna2Button6.TabIndex = 4;
-            this.guna2Button6.UseTransparentBackground = true;
+            this.btn.Animated = true;
+            this.btn.CheckedState.Parent = this.btn;
+            this.btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn.CustomImages.Parent = this.btn;
+            this.btn.FillColor = System.Drawing.Color.Transparent;
+            this.btn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn.ForeColor = System.Drawing.Color.White;
+            this.btn.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btn.HoverState.Parent = this.btn;
+            this.btn.Image = ((System.Drawing.Image)(resources.GetObject("btn.Image")));
+            this.btn.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn.Location = new System.Drawing.Point(438, 60);
+            this.btn.Name = "btn";
+            this.btn.PressedColor = System.Drawing.Color.Transparent;
+            this.btn.ShadowDecoration.Parent = this.btn;
+            this.btn.Size = new System.Drawing.Size(25, 25);
+            this.btn.TabIndex = 4;
+            this.btn.UseTransparentBackground = true;
             // 
             // guna2TextBox3
             // 
@@ -486,6 +491,7 @@
             // 
             this.Titles.AllowLinksHandling = true;
             this.Titles.MaximumSize = new System.Drawing.Size(0, 0);
+            this.Titles.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             // 
             // FIleCompressor
             // 
@@ -535,13 +541,13 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button BtnxtractBrowseArchive;
+        private Guna.UI2.WinForms.Guna2Button BtnExtractBrowseDirectory;
+        private Guna.UI2.WinForms.Guna2Button BtnExtraction;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btn;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
