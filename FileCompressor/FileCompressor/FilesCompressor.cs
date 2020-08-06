@@ -16,5 +16,10 @@ namespace FileCompressor
         {
             InitializeComponent();
         }
+
+        private void FIleCompressor_Load(object sender, EventArgs e)
+        {
+            ShadowFIleCompressor.SetShadowForm(this);
+        }
     }
 }
