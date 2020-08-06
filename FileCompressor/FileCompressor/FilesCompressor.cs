@@ -47,13 +47,19 @@ namespace FileCompressor
         }
         private void BtnExtraction_Click(object sender, EventArgs e)
         {
-            SevenZipExtractor.SetLibraryPath(Application.StartupPath + "\\7z.dll");
-            using (SevenZipExtractor tmp = new SevenZipExtractor(txtExtractArchive.Text))
+            if (txtExtractArchive.Text == "" && txtExtractDirectory.Text == "")
             {
-                tmp.ExtractArchive(txtExtractDirectory.Text);
+                MessageBox.Show("Select your file please!", "Information");
             }
-            MessageBox.Show("Extraction Finished ...", "Information");
-            CleanTxtExtraction();
+            else {
+                SevenZipExtractor.SetLibraryPath(Application.StartupPath + "\\7z.dll");
+                using (SevenZipExtractor tmp = new SevenZipExtractor(txtExtractArchive.Text))
+                {
+                    tmp.ExtractArchive(txtExtractDirectory.Text);
+                }
+                MessageBox.Show("Extraction Finished ...", "Information");
+                CleanTxtExtraction();
+            }
         }
         //COMPRESSION
         void CleanTxtCompression()
@@ -75,13 +81,19 @@ namespace FileCompressor
 
         private void BtnCompression_Click(object sender, EventArgs e)
         {
-            SevenZipCompressor.SetLibraryPath(Application.StartupPath + "\\7z.dll");
-            SevenZipCompressor tmp = new SevenZipCompressor();
-            tmp.ArchiveFormat = OutArchiveFormat.SevenZip;
-            tmp.CompressionLevel = CompressionLevel.Ultra;
-            tmp.CompressDirectory(txtCompressDirectory.Text, txtCompressOutput.Text);
-            MessageBox.Show("Compression Finished ...","Information");
-            CleanTxtCompression();
+            if (txtCompressDirectory.Text == "" && txtCompressOutput.Text == "")
+            {
+                MessageBox.Show("Select your file please!", "Information");
+            }
+            else {
+                SevenZipCompressor.SetLibraryPath(Application.StartupPath + "\\7z.dll");
+                SevenZipCompressor tmp = new SevenZipCompressor();
+                tmp.ArchiveFormat = OutArchiveFormat.SevenZip;
+                tmp.CompressionLevel = CompressionLevel.Ultra;
+                tmp.CompressDirectory(txtCompressDirectory.Text, txtCompressOutput.Text);
+                MessageBox.Show("Compression Finished ...","Information");
+                CleanTxtCompression();
+            }
         }
     }
 }
