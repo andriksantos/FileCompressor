@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FileCompressor
 {
-    public partial class Form1 : Form
+    public partial class FIleCompressor : Form
     {
-        public Form1()
+        public FIleCompressor()
         {
             InitializeComponent();
         }
