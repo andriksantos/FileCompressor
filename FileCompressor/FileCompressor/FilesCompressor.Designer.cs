@@ -45,8 +45,8 @@
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtExtractDirectory = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtExtractArchive = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnExtractBrowseDirectory = new Guna.UI2.WinForms.Guna2Button();
             this.BtnxtractBrowseArchive = new Guna.UI2.WinForms.Guna2Button();
             this.BtnExtraction = new Guna.UI2.WinForms.Guna2Button();
@@ -59,6 +59,9 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Titles = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.PanelTitulo.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Extraction.SuspendLayout();
@@ -196,8 +199,8 @@
             this.guna2GroupBox1.Controls.Add(this.BtnExtraction);
             this.guna2GroupBox1.Controls.Add(this.BtnxtractBrowseArchive);
             this.guna2GroupBox1.Controls.Add(this.BtnExtractBrowseDirectory);
-            this.guna2GroupBox1.Controls.Add(this.guna2TextBox2);
-            this.guna2GroupBox1.Controls.Add(this.guna2TextBox1);
+            this.guna2GroupBox1.Controls.Add(this.txtExtractArchive);
+            this.guna2GroupBox1.Controls.Add(this.txtExtractDirectory);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2GroupBox1.Cursor = System.Windows.Forms.Cursors.Default;
@@ -233,51 +236,51 @@
             this.guna2HtmlLabel3.TabIndex = 1;
             this.guna2HtmlLabel3.Text = "Archive file name";
             // 
-            // guna2TextBox1
+            // txtExtractDirectory
             // 
-            this.guna2TextBox1.BorderRadius = 6;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(122, 60);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(310, 25);
-            this.guna2TextBox1.TabIndex = 2;
+            this.txtExtractDirectory.BorderRadius = 6;
+            this.txtExtractDirectory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExtractDirectory.DefaultText = "";
+            this.txtExtractDirectory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtExtractDirectory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtExtractDirectory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExtractDirectory.DisabledState.Parent = this.txtExtractDirectory;
+            this.txtExtractDirectory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExtractDirectory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExtractDirectory.FocusedState.Parent = this.txtExtractDirectory;
+            this.txtExtractDirectory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExtractDirectory.HoverState.Parent = this.txtExtractDirectory;
+            this.txtExtractDirectory.Location = new System.Drawing.Point(122, 60);
+            this.txtExtractDirectory.Name = "txtExtractDirectory";
+            this.txtExtractDirectory.PasswordChar = '\0';
+            this.txtExtractDirectory.PlaceholderText = "";
+            this.txtExtractDirectory.SelectedText = "";
+            this.txtExtractDirectory.ShadowDecoration.Parent = this.txtExtractDirectory;
+            this.txtExtractDirectory.Size = new System.Drawing.Size(310, 25);
+            this.txtExtractDirectory.TabIndex = 2;
             // 
-            // guna2TextBox2
+            // txtExtractArchive
             // 
-            this.guna2TextBox2.BorderRadius = 6;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(122, 107);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(310, 25);
-            this.guna2TextBox2.TabIndex = 3;
+            this.txtExtractArchive.BorderRadius = 6;
+            this.txtExtractArchive.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExtractArchive.DefaultText = "";
+            this.txtExtractArchive.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtExtractArchive.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtExtractArchive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExtractArchive.DisabledState.Parent = this.txtExtractArchive;
+            this.txtExtractArchive.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExtractArchive.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExtractArchive.FocusedState.Parent = this.txtExtractArchive;
+            this.txtExtractArchive.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExtractArchive.HoverState.Parent = this.txtExtractArchive;
+            this.txtExtractArchive.Location = new System.Drawing.Point(122, 107);
+            this.txtExtractArchive.Name = "txtExtractArchive";
+            this.txtExtractArchive.PasswordChar = '\0';
+            this.txtExtractArchive.PlaceholderText = "";
+            this.txtExtractArchive.SelectedText = "";
+            this.txtExtractArchive.ShadowDecoration.Parent = this.txtExtractArchive;
+            this.txtExtractArchive.Size = new System.Drawing.Size(310, 25);
+            this.txtExtractArchive.TabIndex = 3;
             // 
             // BtnExtractBrowseDirectory
             // 
@@ -300,6 +303,7 @@
             this.BtnExtractBrowseDirectory.TabIndex = 4;
             this.Titles.SetToolTip(this.BtnExtractBrowseDirectory, "Extract Browse Directory");
             this.BtnExtractBrowseDirectory.UseTransparentBackground = true;
+            this.BtnExtractBrowseDirectory.Click += new System.EventHandler(this.BtnExtractBrowseDirectory_Click);
             // 
             // BtnxtractBrowseArchive
             // 
@@ -322,6 +326,7 @@
             this.BtnxtractBrowseArchive.TabIndex = 5;
             this.Titles.SetToolTip(this.BtnxtractBrowseArchive, "xtract Browse Archive");
             this.BtnxtractBrowseArchive.UseTransparentBackground = true;
+            this.BtnxtractBrowseArchive.Click += new System.EventHandler(this.BtnxtractBrowseArchive_Click);
             // 
             // BtnExtraction
             // 
@@ -340,6 +345,7 @@
             this.BtnExtraction.TabIndex = 6;
             this.BtnExtraction.Text = "Extraction";
             this.Titles.SetToolTip(this.BtnExtraction, "Extraction");
+            this.BtnExtraction.Click += new System.EventHandler(this.BtnExtraction_Click);
             // 
             // guna2GroupBox2
             // 
@@ -496,6 +502,10 @@
             this.Titles.MaximumSize = new System.Drawing.Size(0, 0);
             this.Titles.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FIleCompressor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,8 +550,8 @@
         private System.Windows.Forms.TabPage Extraction;
         private System.Windows.Forms.TabPage Compression;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtExtractArchive;
+        private Guna.UI2.WinForms.Guna2TextBox txtExtractDirectory;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button BtnxtractBrowseArchive;
@@ -556,6 +566,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlToolTip Titles;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
