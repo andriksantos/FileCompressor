@@ -19,6 +19,9 @@ namespace FileCompressor
 
         private void FIleCompressor_Load(object sender, EventArgs e)
         {
+            string year;
+            year = DateTime.Today.Year.ToString();
+            CopyRight.Text = "Copyright © " + year +  " All rights reserved";
             ShadowFIleCompressor.SetShadowForm(this);
         }
         //CONTROL EXIT
@@ -94,6 +97,31 @@ namespace FileCompressor
                 MessageBox.Show("Compression Finished ...","Information");
                 CleanTxtCompression();
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://andriksantos.github.io");
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://twitter.com/andrik_rsm");
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/andriksantos/FileCompressor");
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/andriksantos");
+        }
+
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://andriksantos.github.io");
         }
     }
 }

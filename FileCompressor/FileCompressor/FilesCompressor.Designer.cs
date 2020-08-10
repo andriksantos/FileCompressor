@@ -41,33 +41,46 @@
             this.MoverTitulo = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Extraction = new System.Windows.Forms.TabPage();
-            this.Compression = new System.Windows.Forms.TabPage();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtExtractDirectory = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtExtractArchive = new Guna.UI2.WinForms.Guna2TextBox();
-            this.BtnExtractBrowseDirectory = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnxtractBrowseArchive = new Guna.UI2.WinForms.Guna2Button();
             this.BtnExtraction = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnxtractBrowseArchive = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnExtractBrowseDirectory = new Guna.UI2.WinForms.Guna2Button();
+            this.txtExtractArchive = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtExtractDirectory = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Compression = new System.Windows.Forms.TabPage();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnCompression = new Guna.UI2.WinForms.Guna2Button();
             this.BtnBrowseOut = new Guna.UI2.WinForms.Guna2Button();
             this.BtnBrowse = new Guna.UI2.WinForms.Guna2Button();
             this.txtCompressOutput = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCompressDirectory = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Titles = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.CopyRight = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PanelTitulo.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Extraction.SuspendLayout();
-            this.Compression.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
+            this.Compression.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.guna2GroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // MoverFileCompressor
@@ -158,10 +171,11 @@
             // 
             this.tabControl1.Controls.Add(this.Extraction);
             this.tabControl1.Controls.Add(this.Compression);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.ItemSize = new System.Drawing.Size(247, 28);
+            this.tabControl1.ItemSize = new System.Drawing.Size(165, 28);
             this.tabControl1.Location = new System.Drawing.Point(0, 50);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -180,19 +194,6 @@
             this.Extraction.TabIndex = 0;
             this.Extraction.Text = "Extraction";
             this.Extraction.UseVisualStyleBackColor = true;
-            // 
-            // Compression
-            // 
-            this.Compression.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Compression.Controls.Add(this.guna2GroupBox2);
-            this.Compression.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Compression.Location = new System.Drawing.Point(4, 32);
-            this.Compression.Name = "Compression";
-            this.Compression.Padding = new System.Windows.Forms.Padding(3);
-            this.Compression.Size = new System.Drawing.Size(492, 214);
-            this.Compression.TabIndex = 1;
-            this.Compression.Text = "Compression";
-            this.Compression.UseVisualStyleBackColor = true;
             // 
             // guna2GroupBox1
             // 
@@ -214,96 +215,24 @@
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Extraction";
             // 
-            // guna2HtmlLabel2
+            // BtnExtraction
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Enabled = false;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(15, 65);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(94, 16);
-            this.guna2HtmlLabel2.TabIndex = 0;
-            this.guna2HtmlLabel2.Text = "Output directory";
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Enabled = false;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Raleway", 9F);
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(14, 112);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(100, 16);
-            this.guna2HtmlLabel3.TabIndex = 1;
-            this.guna2HtmlLabel3.Text = "Archive file name";
-            // 
-            // txtExtractDirectory
-            // 
-            this.txtExtractDirectory.BorderRadius = 6;
-            this.txtExtractDirectory.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtExtractDirectory.DefaultText = "";
-            this.txtExtractDirectory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtExtractDirectory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtExtractDirectory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExtractDirectory.DisabledState.Parent = this.txtExtractDirectory;
-            this.txtExtractDirectory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExtractDirectory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExtractDirectory.FocusedState.Parent = this.txtExtractDirectory;
-            this.txtExtractDirectory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExtractDirectory.HoverState.Parent = this.txtExtractDirectory;
-            this.txtExtractDirectory.Location = new System.Drawing.Point(122, 60);
-            this.txtExtractDirectory.Name = "txtExtractDirectory";
-            this.txtExtractDirectory.PasswordChar = '\0';
-            this.txtExtractDirectory.PlaceholderText = "";
-            this.txtExtractDirectory.SelectedText = "";
-            this.txtExtractDirectory.ShadowDecoration.Parent = this.txtExtractDirectory;
-            this.txtExtractDirectory.Size = new System.Drawing.Size(310, 25);
-            this.txtExtractDirectory.TabIndex = 2;
-            // 
-            // txtExtractArchive
-            // 
-            this.txtExtractArchive.BorderRadius = 6;
-            this.txtExtractArchive.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtExtractArchive.DefaultText = "";
-            this.txtExtractArchive.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtExtractArchive.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtExtractArchive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExtractArchive.DisabledState.Parent = this.txtExtractArchive;
-            this.txtExtractArchive.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExtractArchive.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExtractArchive.FocusedState.Parent = this.txtExtractArchive;
-            this.txtExtractArchive.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExtractArchive.HoverState.Parent = this.txtExtractArchive;
-            this.txtExtractArchive.Location = new System.Drawing.Point(122, 107);
-            this.txtExtractArchive.Name = "txtExtractArchive";
-            this.txtExtractArchive.PasswordChar = '\0';
-            this.txtExtractArchive.PlaceholderText = "";
-            this.txtExtractArchive.SelectedText = "";
-            this.txtExtractArchive.ShadowDecoration.Parent = this.txtExtractArchive;
-            this.txtExtractArchive.Size = new System.Drawing.Size(310, 25);
-            this.txtExtractArchive.TabIndex = 3;
-            // 
-            // BtnExtractBrowseDirectory
-            // 
-            this.BtnExtractBrowseDirectory.Animated = true;
-            this.BtnExtractBrowseDirectory.CheckedState.Parent = this.BtnExtractBrowseDirectory;
-            this.BtnExtractBrowseDirectory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnExtractBrowseDirectory.CustomImages.Parent = this.BtnExtractBrowseDirectory;
-            this.BtnExtractBrowseDirectory.FillColor = System.Drawing.Color.Transparent;
-            this.BtnExtractBrowseDirectory.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnExtractBrowseDirectory.ForeColor = System.Drawing.Color.White;
-            this.BtnExtractBrowseDirectory.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.BtnExtractBrowseDirectory.HoverState.Parent = this.BtnExtractBrowseDirectory;
-            this.BtnExtractBrowseDirectory.Image = ((System.Drawing.Image)(resources.GetObject("BtnExtractBrowseDirectory.Image")));
-            this.BtnExtractBrowseDirectory.ImageSize = new System.Drawing.Size(25, 25);
-            this.BtnExtractBrowseDirectory.Location = new System.Drawing.Point(438, 60);
-            this.BtnExtractBrowseDirectory.Name = "BtnExtractBrowseDirectory";
-            this.BtnExtractBrowseDirectory.PressedColor = System.Drawing.Color.Transparent;
-            this.BtnExtractBrowseDirectory.ShadowDecoration.Parent = this.BtnExtractBrowseDirectory;
-            this.BtnExtractBrowseDirectory.Size = new System.Drawing.Size(25, 25);
-            this.BtnExtractBrowseDirectory.TabIndex = 4;
-            this.Titles.SetToolTip(this.BtnExtractBrowseDirectory, "Extract Browse Directory");
-            this.BtnExtractBrowseDirectory.UseTransparentBackground = true;
-            this.BtnExtractBrowseDirectory.Click += new System.EventHandler(this.BtnExtractBrowseDirectory_Click);
+            this.BtnExtraction.BorderRadius = 6;
+            this.BtnExtraction.CheckedState.Parent = this.BtnExtraction;
+            this.BtnExtraction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExtraction.CustomImages.Parent = this.BtnExtraction;
+            this.BtnExtraction.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.BtnExtraction.Font = new System.Drawing.Font("Raleway", 9F);
+            this.BtnExtraction.ForeColor = System.Drawing.Color.White;
+            this.BtnExtraction.HoverState.Parent = this.BtnExtraction;
+            this.BtnExtraction.Location = new System.Drawing.Point(175, 158);
+            this.BtnExtraction.Name = "BtnExtraction";
+            this.BtnExtraction.ShadowDecoration.Parent = this.BtnExtraction;
+            this.BtnExtraction.Size = new System.Drawing.Size(115, 32);
+            this.BtnExtraction.TabIndex = 6;
+            this.BtnExtraction.Text = "Extraction";
+            this.Titles.SetToolTip(this.BtnExtraction, "Extraction");
+            this.BtnExtraction.Click += new System.EventHandler(this.BtnExtraction_Click);
             // 
             // BtnxtractBrowseArchive
             // 
@@ -328,24 +257,109 @@
             this.BtnxtractBrowseArchive.UseTransparentBackground = true;
             this.BtnxtractBrowseArchive.Click += new System.EventHandler(this.BtnxtractBrowseArchive_Click);
             // 
-            // BtnExtraction
+            // BtnExtractBrowseDirectory
             // 
-            this.BtnExtraction.BorderRadius = 6;
-            this.BtnExtraction.CheckedState.Parent = this.BtnExtraction;
-            this.BtnExtraction.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnExtraction.CustomImages.Parent = this.BtnExtraction;
-            this.BtnExtraction.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.BtnExtraction.Font = new System.Drawing.Font("Raleway", 9F);
-            this.BtnExtraction.ForeColor = System.Drawing.Color.White;
-            this.BtnExtraction.HoverState.Parent = this.BtnExtraction;
-            this.BtnExtraction.Location = new System.Drawing.Point(175, 158);
-            this.BtnExtraction.Name = "BtnExtraction";
-            this.BtnExtraction.ShadowDecoration.Parent = this.BtnExtraction;
-            this.BtnExtraction.Size = new System.Drawing.Size(115, 32);
-            this.BtnExtraction.TabIndex = 6;
-            this.BtnExtraction.Text = "Extraction";
-            this.Titles.SetToolTip(this.BtnExtraction, "Extraction");
-            this.BtnExtraction.Click += new System.EventHandler(this.BtnExtraction_Click);
+            this.BtnExtractBrowseDirectory.Animated = true;
+            this.BtnExtractBrowseDirectory.CheckedState.Parent = this.BtnExtractBrowseDirectory;
+            this.BtnExtractBrowseDirectory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExtractBrowseDirectory.CustomImages.Parent = this.BtnExtractBrowseDirectory;
+            this.BtnExtractBrowseDirectory.FillColor = System.Drawing.Color.Transparent;
+            this.BtnExtractBrowseDirectory.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnExtractBrowseDirectory.ForeColor = System.Drawing.Color.White;
+            this.BtnExtractBrowseDirectory.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.BtnExtractBrowseDirectory.HoverState.Parent = this.BtnExtractBrowseDirectory;
+            this.BtnExtractBrowseDirectory.Image = ((System.Drawing.Image)(resources.GetObject("BtnExtractBrowseDirectory.Image")));
+            this.BtnExtractBrowseDirectory.ImageSize = new System.Drawing.Size(25, 25);
+            this.BtnExtractBrowseDirectory.Location = new System.Drawing.Point(438, 60);
+            this.BtnExtractBrowseDirectory.Name = "BtnExtractBrowseDirectory";
+            this.BtnExtractBrowseDirectory.PressedColor = System.Drawing.Color.Transparent;
+            this.BtnExtractBrowseDirectory.ShadowDecoration.Parent = this.BtnExtractBrowseDirectory;
+            this.BtnExtractBrowseDirectory.Size = new System.Drawing.Size(25, 25);
+            this.BtnExtractBrowseDirectory.TabIndex = 4;
+            this.Titles.SetToolTip(this.BtnExtractBrowseDirectory, "Extract Browse Directory");
+            this.BtnExtractBrowseDirectory.UseTransparentBackground = true;
+            this.BtnExtractBrowseDirectory.Click += new System.EventHandler(this.BtnExtractBrowseDirectory_Click);
+            // 
+            // txtExtractArchive
+            // 
+            this.txtExtractArchive.BorderRadius = 6;
+            this.txtExtractArchive.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExtractArchive.DefaultText = "";
+            this.txtExtractArchive.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtExtractArchive.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtExtractArchive.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExtractArchive.DisabledState.Parent = this.txtExtractArchive;
+            this.txtExtractArchive.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExtractArchive.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExtractArchive.FocusedState.Parent = this.txtExtractArchive;
+            this.txtExtractArchive.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExtractArchive.HoverState.Parent = this.txtExtractArchive;
+            this.txtExtractArchive.Location = new System.Drawing.Point(122, 107);
+            this.txtExtractArchive.Name = "txtExtractArchive";
+            this.txtExtractArchive.PasswordChar = '\0';
+            this.txtExtractArchive.PlaceholderText = "";
+            this.txtExtractArchive.SelectedText = "";
+            this.txtExtractArchive.ShadowDecoration.Parent = this.txtExtractArchive;
+            this.txtExtractArchive.Size = new System.Drawing.Size(310, 25);
+            this.txtExtractArchive.TabIndex = 3;
+            // 
+            // txtExtractDirectory
+            // 
+            this.txtExtractDirectory.BorderRadius = 6;
+            this.txtExtractDirectory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExtractDirectory.DefaultText = "";
+            this.txtExtractDirectory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtExtractDirectory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtExtractDirectory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExtractDirectory.DisabledState.Parent = this.txtExtractDirectory;
+            this.txtExtractDirectory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExtractDirectory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExtractDirectory.FocusedState.Parent = this.txtExtractDirectory;
+            this.txtExtractDirectory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExtractDirectory.HoverState.Parent = this.txtExtractDirectory;
+            this.txtExtractDirectory.Location = new System.Drawing.Point(122, 60);
+            this.txtExtractDirectory.Name = "txtExtractDirectory";
+            this.txtExtractDirectory.PasswordChar = '\0';
+            this.txtExtractDirectory.PlaceholderText = "";
+            this.txtExtractDirectory.SelectedText = "";
+            this.txtExtractDirectory.ShadowDecoration.Parent = this.txtExtractDirectory;
+            this.txtExtractDirectory.Size = new System.Drawing.Size(310, 25);
+            this.txtExtractDirectory.TabIndex = 2;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Enabled = false;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Raleway", 9F);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(14, 112);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(100, 16);
+            this.guna2HtmlLabel3.TabIndex = 1;
+            this.guna2HtmlLabel3.Text = "Archive file name";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Enabled = false;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(15, 65);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(94, 16);
+            this.guna2HtmlLabel2.TabIndex = 0;
+            this.guna2HtmlLabel2.Text = "Output directory";
+            // 
+            // Compression
+            // 
+            this.Compression.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Compression.Controls.Add(this.guna2GroupBox2);
+            this.Compression.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Compression.Location = new System.Drawing.Point(4, 32);
+            this.Compression.Name = "Compression";
+            this.Compression.Padding = new System.Windows.Forms.Padding(3);
+            this.Compression.Size = new System.Drawing.Size(492, 214);
+            this.Compression.TabIndex = 1;
+            this.Compression.Text = "Compression";
+            this.Compression.UseVisualStyleBackColor = true;
             // 
             // guna2GroupBox2
             // 
@@ -366,6 +380,16 @@
             this.guna2GroupBox2.Size = new System.Drawing.Size(486, 208);
             this.guna2GroupBox2.TabIndex = 1;
             this.guna2GroupBox2.Text = "Compression";
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Raleway", 9F);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(15, 111);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(100, 16);
+            this.guna2HtmlLabel6.TabIndex = 7;
+            this.guna2HtmlLabel6.Text = "Archive file name";
             // 
             // BtnCompression
             // 
@@ -489,15 +513,16 @@
             this.guna2HtmlLabel5.TabIndex = 0;
             this.guna2HtmlLabel5.Text = "Directory to compress";
             // 
-            // guna2HtmlLabel6
+            // tabPage1
             // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Raleway", 9F);
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(15, 111);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(100, 16);
-            this.guna2HtmlLabel6.TabIndex = 7;
-            this.guna2HtmlLabel6.Text = "Archive file name";
+            this.tabPage1.Controls.Add(this.guna2GroupBox3);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(492, 214);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "About";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // Titles
             // 
@@ -508,6 +533,95 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // CopyRight
+            // 
+            this.CopyRight.Location = new System.Drawing.Point(0, 189);
+            this.CopyRight.Name = "CopyRight";
+            this.CopyRight.Size = new System.Drawing.Size(483, 15);
+            this.CopyRight.TabIndex = 0;
+            this.CopyRight.Text = "CopyRight";
+            this.CopyRight.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BorderRadius = 6;
+            this.guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.Location = new System.Drawing.Point(194, 161);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
+            this.Titles.SetToolTip(this.guna2PictureBox1, "Follow me on Twitter  @andrik_rsm");
+            this.guna2PictureBox1.UseTransparentBackground = true;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BorderRadius = 6;
+            this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.Location = new System.Drawing.Point(230, 161);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 2;
+            this.guna2PictureBox2.TabStop = false;
+            this.Titles.SetToolTip(this.guna2PictureBox2, "Repository on Github");
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BorderRadius = 6;
+            this.guna2PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.Location = new System.Drawing.Point(266, 161);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(25, 25);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 3;
+            this.guna2PictureBox3.TabStop = false;
+            this.Titles.SetToolTip(this.guna2PictureBox3, "My profile on github");
+            this.guna2PictureBox3.UseTransparentBackground = true;
+            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
+            // 
+            // guna2GroupBox3
+            // 
+            this.guna2GroupBox3.Controls.Add(this.guna2PictureBox4);
+            this.guna2GroupBox3.Controls.Add(this.guna2PictureBox3);
+            this.guna2GroupBox3.Controls.Add(this.guna2PictureBox2);
+            this.guna2GroupBox3.Controls.Add(this.guna2PictureBox1);
+            this.guna2GroupBox3.Controls.Add(this.CopyRight);
+            this.guna2GroupBox3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.guna2GroupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox3.Location = new System.Drawing.Point(3, 3);
+            this.guna2GroupBox3.Name = "guna2GroupBox3";
+            this.guna2GroupBox3.ShadowDecoration.Parent = this.guna2GroupBox3;
+            this.guna2GroupBox3.Size = new System.Drawing.Size(486, 208);
+            this.guna2GroupBox3.TabIndex = 8;
+            this.guna2GroupBox3.Text = "Andrik Santos - Software Developer";
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.Location = new System.Drawing.Point(176, 54);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(140, 71);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 5;
+            this.guna2PictureBox4.TabStop = false;
+            this.Titles.SetToolTip(this.guna2PictureBox4, "My website");
+            this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
             // 
             // FIleCompressor
             // 
@@ -529,11 +643,17 @@
             this.PanelTitulo.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.Extraction.ResumeLayout(false);
-            this.Compression.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            this.Compression.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.guna2GroupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,6 +692,13 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label CopyRight;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
     }
 }
 
