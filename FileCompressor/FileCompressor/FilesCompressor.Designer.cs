@@ -629,7 +629,7 @@
             // 
             this.description.AutoSize = false;
             this.description.BackColor = System.Drawing.Color.Transparent;
-            this.description.Location = new System.Drawing.Point(20, 99);
+            this.description.Location = new System.Drawing.Point(18, 99);
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(450, 55);
             this.description.TabIndex = 6;
