@@ -38,9 +38,9 @@ _Works the same way when unzipping_
 
 <div align="center">
 	<p style="padding:10px;">
-	<img src="FileCompressor/assets/compression.png" width="200px">
-	<img src="FileCompressor/assets/extraction.png" width="200px">
-	<img src="FileCompressor/assets/about.png" width="200px">
+	<img src="FileCompressor/assets/compression.PNG" width="200px">
+	<img src="FileCompressor/assets/extraction.PNG" width="200px">
+	<img src="FileCompressor/assets/about.PNG" width="200px">
 	</p>
 </div>
 
