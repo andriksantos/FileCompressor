@@ -23,6 +23,7 @@ namespace FileCompressor
             year = DateTime.Today.Year.ToString();
             CopyRight.Text = "Copyright © " + year +  " All rights reserved";
             ShadowFIleCompressor.SetShadowForm(this);
+            description.Text = "compress files quickly and easily with File Compressor just select the file and place the address where you want to save it already compressed. Works the same way when unzipping";
         }
         //CONTROL EXIT
         private void Exit_Click(object sender, EventArgs e)

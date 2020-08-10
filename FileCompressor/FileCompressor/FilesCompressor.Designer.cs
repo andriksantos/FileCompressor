@@ -69,6 +69,7 @@
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.description = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PanelTitulo.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Extraction.SuspendLayout();
@@ -548,7 +549,7 @@
             this.guna2PictureBox1.BorderRadius = 6;
             this.guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(194, 161);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(194, 160);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
@@ -564,7 +565,7 @@
             this.guna2PictureBox2.BorderRadius = 6;
             this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.Location = new System.Drawing.Point(230, 161);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(230, 160);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
             this.guna2PictureBox2.Size = new System.Drawing.Size(25, 25);
@@ -580,7 +581,7 @@
             this.guna2PictureBox3.BorderRadius = 6;
             this.guna2PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.Location = new System.Drawing.Point(266, 161);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(266, 160);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
             this.guna2PictureBox3.Size = new System.Drawing.Size(25, 25);
@@ -593,6 +594,7 @@
             // 
             // guna2GroupBox3
             // 
+            this.guna2GroupBox3.Controls.Add(this.description);
             this.guna2GroupBox3.Controls.Add(this.guna2PictureBox4);
             this.guna2GroupBox3.Controls.Add(this.guna2PictureBox3);
             this.guna2GroupBox3.Controls.Add(this.guna2PictureBox2);
@@ -613,15 +615,26 @@
             // 
             this.guna2PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.Location = new System.Drawing.Point(176, 54);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(194, 43);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(140, 71);
+            this.guna2PictureBox4.Size = new System.Drawing.Size(109, 50);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox4.TabIndex = 5;
             this.guna2PictureBox4.TabStop = false;
             this.Titles.SetToolTip(this.guna2PictureBox4, "My website");
             this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
+            // 
+            // description
+            // 
+            this.description.AutoSize = false;
+            this.description.BackColor = System.Drawing.Color.Transparent;
+            this.description.Location = new System.Drawing.Point(20, 99);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(450, 55);
+            this.description.TabIndex = 6;
+            this.description.Text = "description";
+            this.description.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FIleCompressor
             // 
@@ -699,6 +712,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label CopyRight;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel description;
     }
 }
 
