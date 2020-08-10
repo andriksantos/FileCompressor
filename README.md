@@ -7,8 +7,15 @@
 		<img src="https://img.shields.io/badge/Guna-%E2%AD%90%E2%AD%90%E2%AD%90%E2%AD%90%E2%AD%90-brightgreen">
 	</p>
 	<p>
+		<a href="https://github.com/andriksantos/FileCompressor/tags">
 		<img src="https://img.shields.io/badge/Version-1.1-blue">
+		</a>
+		<a href="https://github.com/andriksantos">
 		<img src="https://img.shields.io/badge/Author-AndrikSantos-blue">
+		</a>
+		<a href="https://github.com/andriksantos">
+		<img src="https://img.shields.io/badge/Download-19k-blue">
+		</a>
 	</p>
 	<br>
 	<p>
@@ -23,7 +30,20 @@
 ---
 
 #### About
-Combine multiple files into a single compressed folder to save storage space or share them more easily.
+compress files quickly and easily with File Compressor just select the file and place the address where you want to save it already compressed. 
+
+_Works the same way when unzipping_
+
+#### Captures
+
+<div align="center">
+	<p style="padding:10px;">
+	<img src="FileCompressor/assets/compression.png" width="200px">
+	<img src="FileCompressor/assets/extraction.png" width="200px">
+	<img src="FileCompressor/assets/about.png" width="200px">
+	</p>
+</div>
+
 
 #### Licence
 [ GPL-3.0 License](https://github.com/andriksantos/FileCompressor/blob/master/LICENSE)
