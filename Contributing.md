@@ -4,4 +4,4 @@
 
 ---
 
-Copyright © 2020 | _Andrik Santos_
+Copyright © 2021 | _Andrik Santos_

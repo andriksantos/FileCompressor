@@ -23,7 +23,7 @@
 	</p>
 	<br>
 	<p >
-		<sub>Just type <a href="https://github.com/andriksantos/FileCompressor"><code>File Compressor</code></a> to go here. Check out my <a href="https://andriksantos.github.io/">web</a> and follow me on <a href="https://twitter.com/andrik_rsm">Twitter</a>.</sub>
+		<sub>Just type <a href="https://github.com/andriksantos/FileCompressor"><code>File Compressor</code></a> to go here. Check out my <a href="https://andriksantos.github.io/">web</a> invite me on coffee <a href="https://paypal.me/andriksantos">Paypal</a>.</sub>
 	</p>
 </div>
 
